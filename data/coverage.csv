@@ -1,3 +1,2 @@
-date,equity_hkd,futures_notional_hkd,short_call_notional_hkd,coverage_pct,hsi_close,option_contracts,source
+﻿date,equity_hkd,futures_notional_hkd,short_call_notional_hkd,coverage_pct,hsi_close,option_contracts,source
 2026-10-29,2083943321.14,1014207200,3076459100.00,99.2999,22958.65,2680,https://www.globalxetfs.com.hk/funds/covered-call-etf/
-
