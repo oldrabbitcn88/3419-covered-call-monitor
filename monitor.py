@@ -49,8 +49,8 @@ out=Path('data'); raw=out/'holdings'; raw.mkdir(parents=True,exist_ok=True)
 filename=raw/(date+'.csv')
 buf=io.StringIO(newline=''); writer=csv.writer(buf);writer.writerow([c.get_text(' ',strip=True) for c in table.select('thead th')]);writer.writerows(rows)
 content=buf.getvalue()
-if filename.exists() and filename.read_text(encoding='utf-8-sig').splitlines()!=content.splitlines(): raise ValueError('Existing snapshot differs; inspect revision manually')
-filename.write_text(content,encoding='utf-8-sig',newline='')
+if filename.exists() and [x for x in csv.reader(io.StringIO(filename.read_text(encoding='utf-8-sig'))) if x] != [x for x in csv.reader(io.StringIO(content)) if x]: raise ValueError('Existing snapshot differs; inspect revision manually')
+if not filename.exists(): filename.write_text(content,encoding='utf-8-sig',newline='')
 fields=['date','equity_hkd','futures_notional_hkd','short_call_notional_hkd','coverage_pct','hsi_close','option_contracts','source']
 path=out/'coverage.csv'; prior={}
 if path.exists():
