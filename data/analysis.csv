@@ -1,0 +1,16 @@
+﻿date,status,source_type,source_url,long_exposure_hkd,futures_weight_pct,coverage_pct,weighted_strike,weighted_moneyness_pct,weighted_dte,expiries,expiry_change,delta_coverage_est_pct,delta_vol_assumed_pct,option_nominal_to_nav_pct,option_contracts
+2026-10-29,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3098150521.14,32.7359,99.2999,23550.0000,2.5757,1.0000,2026-10-30,,0.762,20,97.35,2680
+2026-10-30,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3140216830.65,32.6663,99.4024,23550.0000,1.0972,0.0000,2026-10-30,no,0.0,20,97.81,2680
+2026-11-02,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3152587153.64,32.6457,99.4328,23500.0000,0.4560,4.0000,2026-11-06,yes,41.5694,20,97.81,2680
+2026-11-03,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3187406618.01,33.0044,99.4209,23500.0000,-0.1104,3.0000,2026-11-06,no,52.4838,20,97.96,2694
+2026-11-04,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3241705357.11,33.0230,99.3908,23500.0000,-1.7538,2.0000,2026-11-06,no,88.0029,20,99.07,2694
+2026-11-05,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3364446598.04,33.1005,99.2779,23500.0000,-5.2304,1.0000,2026-11-06,no,99.2779,20,102.48,2694
+2026-11-06,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3318561269.35,33.0363,99.3716,23500.0000,-4.0106,0.0000,2026-11-06,no,99.3716,20,101.56,2694
+2026-11-09,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3315987733.62,33.0741,99.3150,24800.0000,1.4358,4.0000,2026-11-13,yes,24.9564,20,101.31,2694
+2026-11-10,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3303961533.04,33.2920,99.3739,24800.0000,0.9894,3.0000,2026-11-13,no,29.4847,20,101.21,2674
+2026-11-11,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3268822734.54,33.2364,99.4559,24800.0000,1.9908,2.0000,2026-11-13,no,9.2231,20,101.03,2674
+2026-11-12,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3228115706.83,33.2480,99.4371,24800.0000,3.2965,1.0000,2026-11-13,no,0.0985,20,100.99,2674
+2026-11-13,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3176544848.28,33.2130,99.4901,24800.0000,4.9176,0.0000,2026-11-13,no,0.0,20,101.07,2674
+2026-11-16,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3242243365.67,34.2452,99.4187,23900.0000,0.6153,4.0000,2026-11-20,yes,38.6513,20,101.00,2714
+2026-11-17,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3208086074.52,34.2309,99.4381,23900.0000,1.6668,3.0000,2026-11-20,no,18.2336,20,100.65,2714
+2026-11-18,observed,issuer_daily,https://www.globalxetfs.com.hk/funds/covered-call-etf/,3176609343.43,34.1816,99.5117,23900.0000,2.5982,2.0000,2026-11-20,no,4.204,20,100.55,2714

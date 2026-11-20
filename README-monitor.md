@@ -1,12 +1,12 @@
 # 3419 covered-call holdings monitor
 
-Checks the official Global X HSI Covered Call Active ETF page daily at 09:17, 18:17 and 21:17 Hong Kong time. The task records new disclosed dates only; missed historical days cannot necessarily be recovered.
+The collector checks the [official Global X fund page](https://www.globalxetfs.com.hk/funds/covered-call-etf/) at 09:17, 18:17 and 21:17 Hong Kong time. It allows the issuer until 18:00 on the next HKEX securities trading day to publish the preceding session. This is a monitoring threshold based on observed publication lag. A stale response fails the job and accepted observations are still saved. The calendar uses HKEX circulars CT/063/24, CT/075/25 and CT/077/26. Update it before the 2028 sessions and after exceptional exchange closures.
 
-- `data/holdings/YYYY-MM-DD.csv`: disclosed holdings snapshot.
-- `data/details/YYYY-MM-DD.json`: official option details and index close.
-- `data/coverage.csv`: daily nominal coverage series.
+- `data/holdings/YYYY-MM-DD.csv` and `data/details/YYYY-MM-DD.json` hold the accepted disclosure, including index close and option rows.
+- `data/page/` holds the compressed original response and timestamp plus SHA-256 for the first matching accepted capture. Earlier CSV and JSON files still retain their original capture time. Their original HTML can only be archived if the issuer still serves it.
+- `data/revisions/` records same-date holding or option detail changes with the HTML and capture time. The workflow fails and retains the existing daily snapshot for review. When approving a revision, replace both canonical input files together after reconciliation, then rerun collection. Other failed responses are retained in Actions diagnostics for 14 days when HTML is available.
+- `data/coverage.csv` holds accepted daily coverage. The holdings and option details must agree per short HSI call contract by index, expiry, strike and side. The denominator is equity market value plus HSI ETF market value plus futures notional. Tracker ETF codes 2800 and 2833 and their RMB counters count as long exposure. The 3137/9137 money-market fund and recognized cash lines are excluded.
+- `data/analysis.csv` gives futures share of long exposure, strike moneyness, days to expiry, expiry changes and Delta-adjusted coverage. A change in the disclosed expiry set is flagged only across adjacent sessions and can indicate a roll. Delta is a Black–Scholes estimate with constant 20% volatility and zero rates and dividend yield. Missing HKEX sessions from the start of daily collection carry blank metrics.
+- `data/historical_checkpoints.csv` records report-period observations and their sources. The first checkpoint uses the 2025-03-31 investment portfolio and the same-date HSI close to reconstruct spot option notional. The daily series uses issuer daily disclosures and leaves gaps blank.
 
-Coverage = official short-call notional / (equity market value + long HSI futures contracts × futures price × HKD 50). Money-market ETF 3137 is excluded. This is not delta-adjusted coverage. The script rejects unknown instruments, conflicting dates, option-notional mismatch, or changed snapshots; review failed Actions runs. If the issuer changes security types or holdings format, classification must be updated before collecting again. Historical files may be revised by issuer; conflicting snapshots require manual review.
-
-Source: https://www.globalxetfs.com.hk/funds/covered-call-etf/
-
+`python analysis.py --through YYYY-MM-DD` regenerates the analysis from saved inputs. The monthly ATM Premium Yield series is a strategy benchmark. Estimating actual 3419 premium receipts requires trade quantities and execution premiums.

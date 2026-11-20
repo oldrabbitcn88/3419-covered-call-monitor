@@ -1,0 +1,2 @@
+date,source_type,source_url,index_close_source_url,equity_hkd,index_etf_hkd,futures_notional_hkd,short_call_contracts,short_call_notional_hkd,hsi_close,coverage_pct
+2025-03-31,annual_report_period_end,https://www.hkexnews.hk/listedco/listconews/sehk/2025/0731/2025073100258_c.pdf,https://www.censtatd.gov.hk/en/data/stat_report/product/B1010002/att/B10100022026MM05B0100.pdf,49135715,0,13897200,54,62422866,23119.58,99.0322
