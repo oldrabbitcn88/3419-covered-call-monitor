@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-18",
+  "captured_at_utc": "2026-11-20T03:09:56.860953+00:00",
+  "index_close": "23294.75",
+  "option_details": [
+    [
+      "Short  HSI WEEKLY OPTI 23,900 Call Option",
+      "HKD$-3,161,097,575.00",
+      "-100.55%",
+      "23,900",
+      "2.60%",
+      "11/20/2026",
+      "2",
+      "23,295"
+    ]
+  ],
+  "url": "https://www.globalxetfs.com.hk/funds/covered-call-etf/",
+  "nav_total": "3143807971.06",
+  "html_sha256": "b1608370746e7332633c16665c98221e59acc23bbe24965f5d12d7d519fec80c"
+}
